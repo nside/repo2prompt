@@ -73,7 +73,7 @@ def save_prompt_to_file(prompt, output_path):
 
 def main():
     parser = argparse.ArgumentParser(description="Generate a prompt from a repository.")
-    parser.add_argument("repo_path", required=True, help="Path to the repository directory")
+    parser.add_argument("repo_path", default=".", help="Path to the repository directory")
     parser.add_argument("-o", "--output", default="prompt.txt", help="Output file path")
     parser.add_argument("-i", "--include-hidden", action="store_true", help="Include hidden files and directories")
     parser.add_argument("-d", "--max-depth", type=int, default=10, help="Maximum depth of directory traversal")
